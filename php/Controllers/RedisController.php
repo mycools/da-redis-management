@@ -500,7 +500,7 @@ class RedisController
      *
      * @return string
      */
-    private function _generatePassword($length = 15, $add_dashes = FALSE, $available_sets = 'luds')
+    private function _generatePassword($length = 15, $add_dashes = FALSE, $available_sets = 'lud')
     {
         $sets = array();
         if (strpos($available_sets, 'l') !== FALSE)
