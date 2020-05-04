@@ -13,7 +13,7 @@ For enabeling, starting and stopping for redis instances it uses sudo with minim
 ## Plugin installation
 ```
 cd /usr/local/directadmin/plugins
-git clone https://github.com/kbentlage/da-redis-management.git redis_management
+git clone https://github.com/mycools/da-redis-management.git redis_management
 sh redis_management/scripts/install.sh
 ```
 
