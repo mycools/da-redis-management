@@ -347,8 +347,7 @@ class RedisController
         //     }
         // }
 
-        $serviceMonConfigFile = "/usr/local/directadmin/data/admin/services.status";
-        $mon = parse_ini_file($serviceMonConfigFile);
+     
         
 
         return TRUE;
