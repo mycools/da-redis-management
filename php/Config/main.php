@@ -9,7 +9,7 @@
 return [
     'plugin' => [
         'dataFile'  => 'data/instances.json',
-        'startPort' => 7001,
+        'startPort' => 7101,
     ],
     'redis' => [
         'user'      => 'redis',
