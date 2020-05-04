@@ -15,6 +15,7 @@ return [
         'user'      => 'redis',
         'group'     => 'redis',
         'configDir' => '/etc/redis/instances',
+        'serviceDir' => '/etc/systemd/system',
         'dataDir'   => '/var/lib/redis',
     ],
 ];
