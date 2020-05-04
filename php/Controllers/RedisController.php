@@ -323,29 +323,29 @@ class RedisController
             
         }
 
-        if ($templateService = file_get_contents($this->_basePath . '/php/Templates/redis.service')){
-            $replaceTokens = array(
-                '{{ port }}',
-                '{{ password }}',
-                '{{ dataDir }}',
-            );
-            $replaceValues = array(
-                $port,
-                $password,
-                $this->_config['redis']['dataDir'],
-            );
-            $templateService = str_replace($replaceTokens, $replaceValues, $templateService);
+        // if ($templateService = file_get_contents($this->_basePath . '/php/Templates/redis.service')){
+        //     $replaceTokens = array(
+        //         '{{ port }}',
+        //         '{{ password }}',
+        //         '{{ dataDir }}',
+        //     );
+        //     $replaceValues = array(
+        //         $port,
+        //         $password,
+        //         $this->_config['redis']['dataDir'],
+        //     );
+        //     $templateService = str_replace($replaceTokens, $replaceValues, $templateService);
 
 
-            // save config file
-            if (file_put_contents($this->_config['redis']['serviceDir'] . '/redis-' . $port . '.conf', $templateService))
-            {
-                chmod($this->_config['redis']['serviceDir'] . '/redis-' . $port . '.service',0600);
-                //return TRUE;
-            }else{
-                return FALSE;
-            }
-        }
+        //     // save config file
+        //     if (file_put_contents($this->_config['redis']['serviceDir'] . '/redis-' . $port . '.conf', $templateService))
+        //     {
+        //         chmod($this->_config['redis']['serviceDir'] . '/redis-' . $port . '.service',0600);
+        //         //return TRUE;
+        //     }else{
+        //         return FALSE;
+        //     }
+        // }
 
         $serviceMonConfigFile = "/usr/local/directadmin/data/admin/services.status";
         $mon = parse_ini_file($serviceMonConfigFile);
